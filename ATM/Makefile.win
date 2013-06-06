@@ -1,0 +1,74 @@
+# Project: MRT
+# Makefile created by Dev-C++ 5.1.1.0
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o MRT.o TaiKhoan.o HoaDon.o GiaoDich.o DuLieuNganHang.o PhanCung.o TienMat.o SODU.o RutTien.o NapTien.o ChuyenTien.o DoiMK.o MuaThe.o ThanhToanHoaDon.o NhatKyGiaoDichMRT.o $(RES)
+LINKOBJ  = main.o MRT.o TaiKhoan.o HoaDon.o GiaoDich.o DuLieuNganHang.o PhanCung.o TienMat.o SODU.o RutTien.o NapTien.o ChuyenTien.o DoiMK.o MuaThe.o ThanhToanHoaDon.o NhatKyGiaoDichMRT.o $(RES)
+LIBS     = -L"C:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc  
+INCS     = -I"C:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+CXXINCS  = -I"C:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+BIN      = MRT.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before MRT.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "MRT.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+MRT.o: MRT.cpp
+	$(CPP) -c MRT.cpp -o MRT.o $(CXXFLAGS)
+
+TaiKhoan.o: TaiKhoan.cpp
+	$(CPP) -c TaiKhoan.cpp -o TaiKhoan.o $(CXXFLAGS)
+
+HoaDon.o: HoaDon.cpp
+	$(CPP) -c HoaDon.cpp -o HoaDon.o $(CXXFLAGS)
+
+GiaoDich.o: GiaoDich.cpp
+	$(CPP) -c GiaoDich.cpp -o GiaoDich.o $(CXXFLAGS)
+
+DuLieuNganHang.o: DuLieuNganHang.cpp
+	$(CPP) -c DuLieuNganHang.cpp -o DuLieuNganHang.o $(CXXFLAGS)
+
+PhanCung.o: PhanCung.cpp
+	$(CPP) -c PhanCung.cpp -o PhanCung.o $(CXXFLAGS)
+
+TienMat.o: TienMat.cpp
+	$(CPP) -c TienMat.cpp -o TienMat.o $(CXXFLAGS)
+
+SODU.o: SODU.cpp
+	$(CPP) -c SODU.cpp -o SODU.o $(CXXFLAGS)
+
+RutTien.o: RutTien.cpp
+	$(CPP) -c RutTien.cpp -o RutTien.o $(CXXFLAGS)
+
+NapTien.o: NapTien.cpp
+	$(CPP) -c NapTien.cpp -o NapTien.o $(CXXFLAGS)
+
+ChuyenTien.o: ChuyenTien.cpp
+	$(CPP) -c ChuyenTien.cpp -o ChuyenTien.o $(CXXFLAGS)
+
+DoiMK.o: DoiMK.cpp
+	$(CPP) -c DoiMK.cpp -o DoiMK.o $(CXXFLAGS)
+
+MuaThe.o: MuaThe.cpp
+	$(CPP) -c MuaThe.cpp -o MuaThe.o $(CXXFLAGS)
+
+ThanhToanHoaDon.o: ThanhToanHoaDon.cpp
+	$(CPP) -c ThanhToanHoaDon.cpp -o ThanhToanHoaDon.o $(CXXFLAGS)
+
+NhatKyGiaoDichMRT.o: NhatKyGiaoDichMRT.cpp
+	$(CPP) -c NhatKyGiaoDichMRT.cpp -o NhatKyGiaoDichMRT.o $(CXXFLAGS)
